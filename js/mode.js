@@ -1,5 +1,5 @@
-export let mode = "easy";
+// export let mode = "easy";
 
-export function setMode(newMode) {
-  mode = newMode;
-}
+// export function setMode(newMode) {
+//   mode = newMode;
+// }

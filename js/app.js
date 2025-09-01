@@ -2,15 +2,14 @@ import { aiChoose } from "./ai-choose.js";
 import {
   elAi,
   elCloseModal,
-  elHahaAudio,
+  elMarco,
   elHands,
   elLevelUp,
-  elLevelUpAudio,
   elOverlay,
   elPlayer,
   elRefreshGame,
   elRules,
-  elRulesModal,
+  // elRulesModal,
   elScore,
   elStatus,
 } from "./html-elements.js";
@@ -50,12 +49,10 @@ elHands.forEach((hand) => {
 });
 
 elRules.addEventListener("click", () => {
-  elRulesModal.classList.remove("hidden");
   elOverlay.style.filter = "blur(2px)";
 });
 
 elCloseModal.addEventListener("click", () => {
-  elRulesModal.classList.add("hidden");
   elOverlay.style.filter = "none";
 });
 
@@ -69,8 +66,8 @@ elRefreshGame.addEventListener("click", refreshGame);
 
 elLevelUp.addEventListener("click", (e) => {
   e.preventDefault();
-  elHahaAudio.play();
-  elHahaAudio.onended = () => {
+  elMarco.play();
+  elMarco.onended = () => {
     window.location.href = "./index.html";
   };
 });

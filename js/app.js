@@ -18,7 +18,9 @@ import { refreshGame } from "./refresh-game.js";
 import { switchZone } from "./switch-zone.js";
 import { mode, setMode } from "./mode.js";
 import { checkWinner } from "./check-winner.js";
+
 let score = 0;
+
 elHands.forEach((hand) => {
   hand.addEventListener("click", (evt) => {
     const player = evt.target.alt;
@@ -38,7 +40,7 @@ elHands.forEach((hand) => {
         score++;
         elScore.textContent = score;
       } else if (winner === "Lose") {
-        score--;
+        score = Math.max(0, score - 1);
         elScore.textContent = score;
       } else if (winner === "Draw") {
         elScore.textContent = score;
@@ -57,18 +59,12 @@ elCloseModal.addEventListener("click", () => {
   elOverlay.style.filter = "none";
 });
 
-elLevelUp.addEventListener("click", (e) => {
-  elLevelUpAudio.play();
-  elLevelUpAudio.onended = () => {
-    window.location.href = "./pages/hard.html";
-  };
-});
-
 if (document.body.classList.contains("index")) {
   setMode("easy");
 } else if (document.body.classList.contains("hard")) {
   setMode("hard");
 }
+
 elRefreshGame.addEventListener("click", refreshGame);
 
 elLevelUp.addEventListener("click", (e) => {

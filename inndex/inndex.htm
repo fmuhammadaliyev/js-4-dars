@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Don Don Ziki</title>
-    <link rel="stylesheet" href="./css/output.css" />
+    <title>Don don ziki</title>
+    <link rel="stylesheet" href="../css/output.css" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,15 +12,22 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asimovian&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="index bg-gradient-to-b from-[#1F3757] to-[#131537] h-[105vh]">
-    <main id="overlay">
+  <body class="hard bg-gradient-to-b from-[#1F3757] to-[#131537] h-[105vh]">
+    <main class="overlay">
       <section class="flex items-center justify-center pt-[48px] pb-[64px]">
         <div
           class="w-[700px] h-[150px] flex justify-between w-[100%] border-[3px] rounded-[15px] pl-[33px] pr-[24px] pb-[18px] pt-[18px] border-[rgba(255,255,255,0.2892)]"
         >
-          <a href="./index.html">
-            <img src="./images/logo.svg" alt="Logo Site" width="159" />
+          <a href="./hard.html">
+            <img src="../images/logo.svg" alt="Logo Site" />
           </a>
 
           <div
@@ -45,42 +52,63 @@
       <!-- Game Zone -->
       <section
         id="gameZone"
-        class="bg-[url('../images/triangle.svg')] bg-no-repeat bg-center bg-[length:250px] min-h-[250px]"
+        class="bg-[url(../images/advanced-bg-img.svg)] bg-no-repeat bg-center"
       >
         <a
-          class="absolute text-white top-[600px] right-[1px] w-[200px] h-[50px] flex items-center justify-center rounded-[8px] bg-[transparent] border-[1px] border-[#F3F3F3] hover:opacity-[80%] transition duration-300"
-          href="./inndex/inndex.htm"
+          class="absolute text-white top-[600px] left-[1320px] w-[200px] h-[50px] flex items-center justify-center rounded-[8px] bg-[transparent] border-[1px] border-[#F3F3F3] hover:opacity-[80%] transition duration-300"
+          href="../index.html"
           id="levelUp"
-          >AMERIKANSKI
+        >
+          Ortga qaytish
         </a>
-        <div class="flex gap-[40px] items-center justify-center flex-col">
-          <div class="flex gap-[80px]">
+        <div class="flex items-center justify-center flex-col">
+          <div>
             <img
-              class="hand w-[200px] h-[203px] hover:cursor-pointer"
-              src="./images/paper.svg"
-              alt="paper"
+              class="hand w-[145px] h-[148px] hover:cursor-pointer"
+              src="../images/scissors.svg"
+              alt="scissors"
+            />
+          </div>
+          <div class="flex items-center justify-center gap-[182px]">
+            <img
+              class="hand w-[145px] h-[148px] hover:cursor-pointer"
+              src="../images/spock.svg"
+              alt="spock"
             />
             <img
-              class="hand w-[200px] h-[203px] hover:cursor-pointer"
-              src="./images/rock.svg"
+              class="hand w-[145px] h-[148px] hover:cursor-pointer"
+              src="../images/paper.svg"
+              alt="paper"
+            />
+          </div>
+          <div class="flex items-center justify-center gap-[52px] mt-[38px]">
+            <img
+              class="hand w-[145px] h-[148px] hover:cursor-pointer"
+              src="../images/lizard.svg"
+              alt="lizard"
+            />
+            <img
+              class="hand w-[145px] h-[148px] hover:cursor-pointer"
+              src="../images/rock.svg"
               alt="rock"
             />
           </div>
-          <img
-            class="hand w-[200px] h-[203px] hover:cursor-pointer"
-            src="./images/scissors.svg"
-            alt="scissors"
-          />
         </div>
       </section>
-
       <!-- Process Zone -->
       <section
         id="processZone"
         class="hidden flex items-center justify-center gap-[50px]"
       >
-        <img id="player" src="./images/oval.svg" alt=" " />
-        <div class="flex flex-col gap-[16px] items-center justify-center">
+        <img
+          id="player"
+          src="../images/oval.svg"
+          alt=" Img"
+          class="w-[145px] h-[148px]"
+        />
+        <div
+          class="flex flex-col gap-[16px] w-[145px] h-[148px] items-center justify-center"
+        >
           <p
             id="status"
             class="font-[700] text-[56px] text-center uppercase text-white"
@@ -92,13 +120,17 @@
             Play Again
           </button>
         </div>
-        <img id="ai" src="./images/oval.svg" alt=" " />
+        <img
+          id="ai"
+          src="../images/oval.svg"
+          alt=" Img"
+          class="w-[145px] h-[148px]"
+        />
       </section>
     </main>
-    <!-- Rules -->
-    <footer class="flex justify-end pb-[32px] pr-[32px]">
+    <footer class="flex justify-end">
       <div
-        class="z-4 w-[400px] flex flex-col gap-[48px] bg-[#FFFFFF] hidden absolute top-[250px] right-[550px] rounded-[8px] p-[32px]"
+        class="z-4 w-[400px] flex flex-col gap-[48px] bg-[#FFFFFF] hidden absolute top-[180px] right-[550px] rounded-[8px] p-[32px]"
         id="rules"
       >
         <div class="flex items-center justify-between">
@@ -124,15 +156,15 @@
           </div>
         </div>
 
-        <img src="./images/rule-basic.svg" alt="" />
+        <img src="../images/rule-advanced.svg" alt="Rules img" />
       </div>
       <button
         id="rulesModal"
-        class="w-[128px] h-[40px] fixed bottom-[15px] flex items-center justify-center text-[16px] font-[600] tracking-[2.5px] rounded-[8px] cursor-pointer transition duration-300 text-white bg-[transparent] border-[1px] border-[#FFFFFF] hover:bg-white hover:text-[#3B4262]"
+        class="w-[128px] h-[40px] fixed bottom-[15px] right-[30px] flex items-center justify-center text-[16px] font-[600] tracking-[2.5px] rounded-[8px] cursor-pointer transition duration-300 text-white bg-[transparent] border-[1px] border-[#FFFFFF] hover:bg-white hover:text-[#3B4262]"
       >
         Rules
       </button>
     </footer>
-    <script src="./js/app.js" type="module"></script>
+    <script src="../js/app.js" type="module"></script>
   </body>
 </html>

@@ -4,23 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Don Don Ziki</title>
-    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./css/output.css" />
     <!-- fonts -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="index bg-gradient-to-b from-[#1F3757] to-[#131537] h-[105vh]">
     <main id="overlay">
-      <!-- Counter -->
       <section class="flex items-center justify-center pt-[48px] pb-[64px]">
         <div
           class="w-[700px] h-[150px] flex justify-between w-[100%] border-[3px] rounded-[15px] pl-[33px] pr-[24px] pb-[18px] pt-[18px] border-[rgba(255,255,255,0.2892)]"
         >
-          <img
-            src="./images/logo.svg"
-            alt="Logo Site"
-            width="159"
-            height="96"
-          />
+          <a href="./index.html">
+            <img src="./images/logo.svg" alt="Logo Site" width="159" />
+          </a>
 
           <div
             class="w-[150px] h-[115px] bg-gradient-to-b from-[#F3F3F3] to-[#FFFFFF] rounded-[8px] flex flex-col items-center justify-center pt-[16px] pb-[16px]"
@@ -44,8 +45,14 @@
       <!-- Game Zone -->
       <section
         id="gameZone"
-        class="bg-[url('./images/triangle.svg')] bg-no-repeat bg-center bg-[length:250px] min-h-[250px]"
+        class="bg-[url('../images/triangle.svg')] bg-no-repeat bg-center bg-[length:250px] min-h-[250px]"
       >
+        <button
+          data-easy="easy"
+          class="w-[130px] h-[40px] right-[30px] bottom-[100px] fixed text-[white] bg-[transparent] border-[1px] border-[white] rounded-[5px] cursor-pointer hover:bg-[white] hover:text-[black] transition duration-100 active:opacity-[80%]"
+        >
+          Easy
+        </button>
         <div class="flex gap-[40px] items-center justify-center flex-col">
           <div class="flex gap-[80px]">
             <img
@@ -55,15 +62,15 @@
             />
             <img
               class="hand w-[200px] h-[203px] hover:cursor-pointer"
-              src="./images/scissors.svg"
-              alt="scissors"
-            />
-            <img
-              class="hand w-[200px] h-[203px] hover:cursor-pointer"
               src="./images/rock.svg"
               alt="rock"
             />
           </div>
+          <img
+            class="hand w-[200px] h-[203px] hover:cursor-pointer"
+            src="./images/scissors.svg"
+            alt="scissors"
+          />
         </div>
       </section>
 
@@ -72,7 +79,7 @@
         id="processZone"
         class="hidden flex items-center justify-center gap-[50px]"
       >
-        <img id="player" src="./images/oval.svg" alt=" Img" />
+        <img id="player" src="./images/oval.svg" alt=" " />
         <div class="flex flex-col gap-[16px] items-center justify-center">
           <p
             id="status"
@@ -85,7 +92,7 @@
             Play Again
           </button>
         </div>
-        <img id="ai" src="./images/oval.svg" alt=" Img" />
+        <img id="ai" src="./images/oval.svg" alt=" " />
       </section>
     </main>
     <!-- Rules -->
@@ -98,10 +105,33 @@
           <h3 class="text-[#3B4262] font-[700] text-[32px] leading-[32px]">
             RULES
           </h3>
-          <div class="hover:bg-gray-100 rounded-[50%]" id="closeRules"></div>
+          <div class="hover:bg-gray-100 rounded-[50%]">
+            <svg
+              class="cursor-pointer"
+              id="closeRules"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.25"
+                d="M19.0918 2.12109L11.667 9.5459L19.0918 16.9707L16.9707 19.0918L9.5459 11.667L2.12109 19.0918L0 16.9707L7.4248 9.5459L0 2.12109L2.12109 0L9.5459 7.4248L16.9707 0L19.0918 2.12109Z"
+                fill="#3B4262"
+              />
+            </svg>
+          </div>
         </div>
+
+        <img src="./images/rule-basic.svg" alt="" />
       </div>
-      <div id="rulesModal"></div>
+      <button
+        id="rulesModal"
+        class="w-[128px] h-[40px] fixed bottom-[15px] flex items-center justify-center text-[16px] font-[600] tracking-[2.5px] rounded-[8px] cursor-pointer transition duration-300 text-white bg-[transparent] border-[1px] border-[#FFFFFF] hover:bg-white hover:text-[#3B4262]"
+      >
+        Rules
+      </button>
     </footer>
     <script src="./js/app.js" type="module"></script>
   </body>

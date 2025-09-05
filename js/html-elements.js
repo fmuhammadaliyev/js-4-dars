@@ -1,17 +1,16 @@
-const elGameZone = document.getElementById("gameZone");
-const elProcessZone = document.getElementById("processZone");
+const elGameZone = document.getElementById("gameZone") || null;
+const elProcessZone = document.getElementById("processZone") || null;
 const elHands = document.querySelectorAll(".hand");
-const elPlayer = document.getElementById("player");
-const elAi = document.getElementById("ai");
-const elRefreshGame = document.getElementById("refreshGame");
-const elStatus = document.getElementById("status");
-const elScore = document.getElementById("counter");
-const elRules = document.getElementById("rulesModal");
-const elRulesModal = document.getElementById("rules");
-const elCloseModal = document.getElementById("closeRules");
-const elOverlay = document.getElementById("overlay");
-const elLevelUp = document.getElementById("levelUp");
-const elMarco = document.getElementById("marco");
+const elPlayer = document.getElementById("player") || null;
+const elAi = document.getElementById("ai") || null;
+const elRefreshGame = document.getElementById("refreshGame") || null;
+const elStatus = document.getElementById("status") || null;
+const elScore = document.getElementById("counter") || null;
+const elRules = document.getElementById("rulesModal") || null;
+const elRulesModal = document.getElementById("rules") || null;
+const elCloseModal = document.getElementById("closeRules") || null;
+const elOverlay = document.getElementById("overlay") || null;
+const elLevelUp = document.getElementById("levelUp") || null;
 
 export {
   elGameZone,
@@ -27,5 +26,4 @@ export {
   elCloseModal,
   elOverlay,
   elLevelUp,
-  elMarco,
 };
